@@ -1,0 +1,40 @@
+import java.util.*;
+class Twin
+{
+static int prime(int n)
+{
+int flag=0,i;
+for(i=2;i<=n/2;i++)
+{
+if(n%i==0)
+{
+flag=1;
+break;
+}
+}
+return flag;
+}
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+int n,n1,i;
+System.out.println("ENTER FIRST NUMBER");
+n=sc.nextInt();
+System.out.println("ENTER LAST NUMBER");
+n1=sc.nextInt();
+System.out.println("THE TWIN PRIMES ARE:");
+for(i=n;i<=n1;i++)
+if(prime(i)==0&&prime(i+2)==0);
+System.out.println(i+" "+(i+2));
+}
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OUTP
+C:\Users\hp>javac Twin.java
+C:\Users\hp>java Twin
+ENTER FIRST NUMBER
+1
+ENTER LAST NUMBER
+10
+THE TWIN PRIMES ARE:
+2 3  5 7
